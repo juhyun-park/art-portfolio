@@ -9,17 +9,22 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/09d72bf3f5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
-    <title>Hello, world!</title>
-    <style>
-        .carousel-inner {
-            width:75%;
-            margin: 0px auto;
-        }
-    </style>
+    <title>Su Hyun's Art Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="loader">
+        <div class="inner"></div>
+    </div>
+
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
             <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
@@ -28,24 +33,21 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://images.unsplash.com/photo-1611657193959-c3efdb2f988f?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="...">
+                <img src="https://images.unsplash.com/photo-1599249300675-c39f1dd2d6be?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZHJhd3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h1>Su Hyun Park</h1>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1611657193959-c3efdb2f988f?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="...">
+                <img src="https://images.unsplash.com/photo-1533688903971-65ad8726f66f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTk4fHxkcmF3fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h1>Artist.</h1>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1611657193959-c3efdb2f988f?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="...">
+                <img src="https://images.unsplash.com/photo-1598349327904-6b033b8028b2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTM4fHxkcmF3fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <h1>Student.</h1>
                 </div>
             </div>
         </div>
@@ -59,12 +61,237 @@
         </a>
     </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <nav id="navigation" class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Menu</a>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#carouselExampleCaptions">Top<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div id="about" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <img class=profileImage src="images/profile.jpeg">
+                </div>
+                <div class="col-md-7">
+                    <h4>Hi! My name is Su Hyun.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contactSection section">
+        <div class="col-md-12" text-center>
+            <p>Like what you see?</p>
+            <h2>I'd love to hear from you!</h2>
+        </div>
+        <a href="mailTo:0423saennu@naver.com" class="contactButton">EMAIL</a>
+        <a href="https://www.instagram.com/0423saennu/" class="contactButton">INSTAGRAM</a>
+    </div>
+
+    <div id="portfolio" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="heading">
+                    <h2>PORTFOLIO</h2>
+                </div>
+                <div class="filter">
+                    <ul id="filters">
+                        <li><a href="#" data-filter="*" class="current">ALL</a></li>
+                        <li><a href="#" data-filter=".ld">LD</a></li>
+                        <li><a href="#" data-filter=".sd">SD</a></li>
+                    </ul>
+                </div>
+
+                <div class="itemsContainer">
+                    <ul class="items">
+                        <li class="ld col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/LD-1-square.jpg">
+                                <div class="icons">
+                                    <a href="images/LD-1.jpeg" title="View image" class="openButton"
+                                    data-fancybox data-caption="LD-1">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="" target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+
+                        <li class="ld col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/LD-2-square.jpg">
+                                <div class="icons">
+                                    <a href="images/LD-2.jpeg" title="View image" class="openButton"
+                                    data-fancybox data-caption="LD-2">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="" target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+
+                        <li class="ld col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/LD-3-square.jpg">
+                                <div class="icons">
+                                    <a href="images/LD-3.jpeg" title="View image" class="openButton"
+                                    data-fancybox data-caption="LD-3">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="" target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+
+                        <li class="ld col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/LD-4-square.jpeg">
+                                <div class="icons">
+                                    <a href="images/LD-4.jpeg" title="View image" class="openButton"
+                                    data-fancybox data-caption="LD-4">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="" target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+
+                        <li class="sd col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/SD-1-square.jpeg">
+                                <div class="icons">
+                                    <a href="images/SD-1.jpeg" title="View image" class="openButton"
+                                    data-fancybox data-caption="SD-1">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="" target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+
+                        <li class="sd col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/SD-2-square.jpeg">
+                                <div class="icons">
+                                    <a href="images/SD-2.jpeg" title="View image" class="openButton"
+                                    data-fancybox data-caption="SD-2">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="" target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+
+                        <li class="sd col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/SD-3-square.jpeg">
+                                <div class="icons">
+                                    <a href="images/SD-3.jpeg" title="View image" class="openButton"
+                                    data-fancybox data-caption="SD-3">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="" target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+
+                        <li class="sd col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/SD-4-square.png">
+                                <div class="icons">
+                                    <a href="images/SD-4.png" title="View image" class="openButton"
+                                    data-fancybox data-caption="SD-4">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="" target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+
+                        <li class="sd col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/SD-5-square.png">
+                                <div class="icons">
+                                    <a href="images/SD-5.png" title="View image" class="openButton"
+                                    data-fancybox data-caption="SD-5">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="" target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="gifSection">
+        <div class="gif-inner">
+        </div>
+    </div>
+
+    <div class="copyrightSection">
+        <div class="col-md-12 text-center">
+            <p>&copy; Copyright Su Hyun Park 2021</p>
+        </div>
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+    <script src=js/script.js></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 </body>
 
